@@ -4,7 +4,7 @@ set -euo pipefail
 
 # TODO: Ensure this is the correct GitHub homepage where releases can be downloaded for cloud-sql-proxy.
 GH_REPO="https://github.com/GoogleCloudPlatform/cloud-sql-proxy"
-TOOL_NAME="cloud-sql-proxy"
+TOOL_NAME="cloud_sql_proxy"
 TOOL_TEST="cloud_sql_proxy --version"
 
 fail() {
@@ -59,7 +59,8 @@ install_version() {
 
   (
     mkdir -p "$install_path"
-    cp -r "$ASDF_DOWNLOAD_PATH"/* "$install_path"
+    # cloud_sql_proxy is built in /bin/download
+    cp -r "$ASDF_DOWNLOAD_PATH"/cmd/$TOOL_NAME/$TOOL_NAME "$install_path"
 
     # TODO: Assert cloud-sql-proxy executable exists.
     local tool_cmd
