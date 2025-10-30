@@ -4,8 +4,8 @@ set -euo pipefail
 
 # TODO: Ensure this is the correct GitHub homepage where releases can be downloaded for cloud-sql-proxy.
 GH_REPO="https://github.com/GoogleCloudPlatform/cloud-sql-proxy"
-TOOL_NAME="cloud_sql_proxy"
-TOOL_TEST="cloud_sql_proxy --version"
+TOOL_NAME="cloud-sql-proxy"
+TOOL_TEST="cloud-sql-proxy --version"
 
 fail() {
   echo -e "asdf-$TOOL_NAME: $*"

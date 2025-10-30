@@ -43,7 +43,7 @@ asdf install cloud-sql-proxy latest
 asdf global cloud-sql-proxy latest
 
 # Now cloud-sql-proxy commands are available
-cloud_sql_proxy --version
+cloud-sql-proxy --version
 ```
 
 Check [asdf](https://github.com/asdf-vm/asdf) readme for more instructions on how to
